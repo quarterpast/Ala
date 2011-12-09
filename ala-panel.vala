@@ -9,7 +9,7 @@ public class Wingpanel.Panel : Gtk.Window {
     public Panel () {
         
 
-        set_default_size (-1, 25);
+        set_default_size (0, 25);
 
         menuhash = new Gee.HashMap<string, Gtk.MenuItem> ();
 
@@ -25,7 +25,7 @@ public class Wingpanel.Panel : Gtk.Window {
         add (menubar);
         menubar.can_focus = true;
         menubar.border_width = 0;
-        menubar.set_size_request(-1,24);
+        menubar.set_size_request(0,24);
         menubar.set_name ("indicator-applet-menubar");
         /*Gtk.rc_parse_string ("""
             style "wingpanel-menuitem"
