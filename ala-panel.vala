@@ -136,13 +136,14 @@ public class Wingpanel.Panel : Gtk.Window {
             context.translate(child.get_allocated_width(),0);
         });
         context.translate(-widget.get_allocated_width(),0);
+        /*
         context.set_source_rgba (1.0, 1.0, 1.0, 0.7);
         context.set_operator (Cairo.Operator.SOURCE);
         if (right_align)
             rounded_bottom_left_stroke (context, 0, 0, width, 25, 16);
         else
             rounded_bottom_right_stroke (context, 0, 0, width, 25, 16);
-        context.stroke ();
+        context.stroke ();*/
         return true;
 
 
