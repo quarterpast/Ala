@@ -9,7 +9,7 @@ public class Wingpanel.Panel : Gtk.Window {
     public Panel () {
         
 
-        set_default_size (0, 25);
+        set_default_size (0, 24);
 
         menuhash = new Gee.HashMap<string, Gtk.MenuItem> ();
 
@@ -116,16 +116,16 @@ public class Wingpanel.Panel : Gtk.Window {
         //Gtk.cairo_transform_to_window(context,widget,this as Gdk.Window);
         context.set_operator(Cairo.Operator.CLEAR);
         // Makes the mask fill the entire window
-        context.rectangle(0.0, 0.0, width,25);
+        context.rectangle(0.0, 0.0, width,24);
         // Deletes everything in the window (sice the compositing operator is clear and mask fills the entire window
         context.fill();
         // Set the compositing operator back to the default
         context.set_operator(Cairo.Operator.OVER);
 
         if (right_align)
-            rounded_bottom_left (context, 0, 0, width, 25, 16);
+            rounded_bottom_left (context, 0, 0, width, 24, 16);
         else
-            rounded_bottom_right (context, 0, 0, width, 25, 16);
+            rounded_bottom_right (context, 0, 0, width, 24, 16);
         context.clip ();
 
         context.set_source_rgba (0.0, 0.0, 0.0, 0.9);
